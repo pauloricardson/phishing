@@ -1,12 +1,232 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 19</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Site ou loja é confiável?</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 35px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 20px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Checklist specific styles */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      flex: 1;
+    }
+
+    .checklist-card {
+      background-color: #f8fafc;
+      border-left: 5px solid #cbd5e1;
+      border-radius: 0 8px 8px 0;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+    }
+
+    .checklist-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .checklist-card.priority {
+      border-left-color: #00aaff;
+      background-color: #f0f9ff;
+    }
+
+    .checklist-card.warning {
+      border-left-color: #ef4444;
+      background-color: #fef2f2;
+    }
+
+    .check-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+      font-size: 18px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .checklist-card.priority .check-circle {
+      color: #00aaff;
+      border: 2px solid #00aaff;
+    }
+
+    .checklist-card.warning .check-circle {
+      color: #ef4444;
+      border: 2px solid #ef4444;
+    }
+
+    .checklist-card:not(.priority):not(.warning) .check-circle {
+      color: #64748b;
+      border: 2px solid #cbd5e1;
+    }
+
+    .card-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 6px;
+      margin-top: 0;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Footer tip */
+    .tip-box {
+      margin-top: auto;
+      background-color: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 12px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      color: #92400e;
+      font-size: 1rem;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 19</h1>
-  <p>Conteúdo do slide 19</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Site ou loja é confiável?</h2>
+        <p class="text-xl text-gray-500 font-light">Antes de comprar, verifique estes pontos essenciais para evitar
+          prejuízos.</p>
+      </div>
+      <!-- Grid de Checklist -->
+      <div class="checklist-grid">
+        <!-- Item 1: Reputação -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="card-content">
+            <h3>Pesquise a Reputação</h3>
+            <p>Consulte sites de reclamações e redes sociais. Veja o que outros clientes dizem sobre entrega e suporte.
+            </p>
+          </div>
+        </div>
+        <!-- Item 2: Preços (Aviso) -->
+        <div class="checklist-card warning">
+          <div class="check-circle">
+            <i class="fas fa-tag"></i>
+          </div>
+          <div class="card-content">
+            <h3>Desconfie de Preços Baixos</h3>
+            <p>Ofertas muito abaixo da média do mercado, especialmente em lançamentos, são o maior sinal de golpe.</p>
+          </div>
+        </div>
+        <!-- Item 3: Lojas Conhecidas -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-store"></i>
+          </div>
+          <div class="card-content">
+            <h3>Prefira Lojas Conhecidas</h3>
+            <p>Opte por grandes varejistas ou sites onde você já comprou. Se for novo, redobre a atenção aos dados.</p>
+          </div>
+        </div>
+        <!-- Item 4: Dados da Empresa -->
+        <div class="checklist-card">
+          <div class="check-circle">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <div class="card-content">
+            <h3>Verifique o CNPJ</h3>
+            <p>Sites legítimos devem exibir CNPJ, endereço físico e telefone no rodapé. Valide essas informações na
+              Receita.</p>
+          </div>
+        </div>
+        <!-- Item 5: Segurança Técnica -->
+        <div class="checklist-card">
+          <div class="check-circle">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="card-content">
+            <h3>Confirme HTTPS</h3>
+            <p>O cadeado na barra de endereço é obrigatório para criptografia, mas não garante idoneidade por si só.
+              Combine com os outros itens.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Dica de Rodapé -->
+      <div class="tip-box shadow-sm">
+        <i class="fas fa-lightbulb text-yellow-500 text-2xl mr-4"></i>
+        <div>
+          <p class="font-bold mb-1">Dica de Segurança:</p>
+          <p>Golpistas copiam o visual de sites famosos. Sempre confira letra por letra se o endereço (URL) está correto
+            (ex: <strong>mercadolivre.com.br</strong> e não <em>mercado-livre-ofertas.com</em>).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide18.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+    <a href="slide20.html" class="nav-btn"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
+
 </html>

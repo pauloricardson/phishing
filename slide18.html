@@ -1,12 +1,226 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 18</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Confirme identidade antes de transferir</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .columns-container {
+      display: flex;
+      flex: 1;
+      gap: 40px;
+    }
+
+    .col-card {
+      flex: 1;
+      border-radius: 16px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Left Column: Warning Signs (Red) */
+    .col-warning {
+      background-color: #fef2f2;
+      border: 1px solid #fee2e2;
+      border-top: 6px solid #ef4444;
+    }
+
+    /* Right Column: Action Plan (Blue) */
+    .col-action {
+      background-color: #f0f9ff;
+      border: 1px solid #e0f2fe;
+      border-top: 6px solid #00aaff;
+    }
+
+    .col-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .item-icon {
+      margin-top: 4px;
+      margin-right: 15px;
+      font-size: 1.1rem;
+    }
+
+    /* Definition Box at bottom */
+    .def-box {
+      margin-top: 25px;
+      background-color: #f8fafc;
+      border-left: 4px solid #003366;
+      padding: 15px 20px;
+      border-radius: 0 8px 8px 0;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 18</h1>
-  <p>Conteúdo do slide 18</p>
+  <div class="slide-container shadow-2xl">
+    <div class="brand-stripe"></div>
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Confirme identidade antes de transferir</h2>
+        <p class="text-xl text-gray-500 font-light">Golpistas exploram a confiança entre familiares e amigos para pedir
+          dinheiro.</p>
+      </div>
+      <!-- Columns -->
+      <div class="columns-container">
+        <!-- Column: Warning Signs -->
+        <div class="col-card col-warning">
+          <div class="col-header text-red-800">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3 text-red-600">
+              <i class="fas fa-mask text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Sinais de Golpe</h3>
+              <p class="text-sm opacity-75">O que desconfiar</p>
+            </div>
+          </div>
+          <div class="item-list">
+            <div class="list-item text-red-900">
+              <i class="fas fa-mobile-screen-button item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-0">"Mudei de número"</p>
+                <p class="text-gray-600 text-sm leading-snug">Mensagens vindas de um número desconhecido com a foto de
+                  um familiar ou amigo dizendo que trocou de celular.</p>
+              </div>
+            </div>
+            <div class="list-item text-red-900">
+              <i class="fas fa-clock item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-0">Urgência Financeira</p>
+                <p class="text-gray-600 text-sm leading-snug">Pedido desesperado de dinheiro para pagar uma conta que
+                  vai vencer ou resolver uma "emergência" imediata.</p>
+              </div>
+            </div>
+            <div class="list-item text-red-900">
+              <i class="fas fa-money-bill-transfer item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-0">Conta de Terceiros</p>
+                <p class="text-gray-600 text-sm leading-snug">O golpista pede para depositar na conta de um "amigo" ou
+                  "sócio" porque a dele está supostamente bloqueada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Column: Action Plan -->
+        <div class="col-card col-action">
+          <div class="col-header text-blue-800">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 text-blue-600">
+              <i class="fas fa-shield-check text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Como Agir</h3>
+              <p class="text-sm opacity-75">Procedimentos de segurança</p>
+            </div>
+          </div>
+          <div class="item-list">
+            <div class="list-item text-blue-900">
+              <i class="fas fa-phone-volume item-icon text-blue-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-0">Ligue para o Número Antigo</p>
+                <p class="text-gray-600 text-sm leading-snug">Não responda no número novo. Ligue para o contato que você
+                  já tinha salvo na agenda para confirmar a história.</p>
+              </div>
+            </div>
+            <div class="list-item text-blue-900">
+              <i class="fas fa-video item-icon text-blue-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-0">Faça Chamada de Vídeo</p>
+                <p class="text-gray-600 text-sm leading-snug">Exija ver o rosto da pessoa. Golpistas recusarão a chamada
+                  alegando que a câmera está quebrada ou conexão ruim.</p>
+              </div>
+            </div>
+            <div class="list-item text-blue-900">
+              <i class="fas fa-user-check item-icon text-blue-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-0">Confira o Destinatário</p>
+                <p class="text-gray-600 text-sm leading-snug">Antes de confirmar o PIX ou transferência, verifique se o
+                  nome e CPF correspondem realmente à pessoa conhecida.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Definition Box -->
+      <div class="def-box">
+        <div class="flex items-start">
+          <i class="fas fa-lightbulb text-yellow-600 text-xl mr-3 mt-1"></i>
+          <div>
+            <p class="font-bold text-gray-800 text-lg mb-1">Dica de Segurança</p>
+            <p class="text-gray-600 text-sm">Avise seus familiares idosos sobre esse tipo de golpe. Combine uma
+              "palavra-chave" ou pergunta secreta com sua família para validar a identidade em casos de emergência real.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide17.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+    <a href="slide19.html" class="nav-btn"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
+
 </html>

@@ -1,12 +1,185 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 14</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Perfis oficiais nas redes sociais</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 20px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .bullet-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      background-color: #f0f7ff;
+      color: #0055aa;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-right: 24px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .content-area {
+      display: flex;
+      flex: 1;
+      gap: 60px;
+    }
+
+    .text-column {
+      flex: 1.2;
+    }
+
+    .image-column {
+      flex: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      max-height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      background-color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 14</h1>
-  <p>Conteúdo do slide 14</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Perfis oficiais nas redes sociais</h2>
+        <p class="text-xl text-gray-500 font-light">Verifique a autenticidade antes de interagir. Golpistas criam clones
+          perfeitos para roubar dados.</p>
+      </div>
+      <!-- Corpo do Slide -->
+      <div class="content-area">
+        <!-- Coluna de Texto (Bullets) -->
+        <div class="text-column">
+          <div class="bullet-item">
+            <div class="icon-box">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div>
+              <p class="text-xl font-bold text-gray-800 mb-1">Busque o Selo de Verificação</p>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Procure sempre pelo indicador de "conta verificada" (o check azul ou dourado) ao lado do nome do perfil.
+                É a principal garantia de que a conta é legítima.
+              </p>
+            </div>
+          </div>
+          <div class="bullet-item">
+            <div class="icon-box">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div>
+              <p class="text-xl font-bold text-gray-800 mb-1">Cuidado com Mensagens Diretas (DM)</p>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Instituições financeiras e grandes empresas raramente iniciam contato pedindo senhas ou dados sensíveis
+                por DM. Desconfie dessa abordagem.
+              </p>
+            </div>
+          </div>
+          <div class="bullet-item">
+            <div class="icon-box">
+              <i class="fas fa-share-nodes"></i>
+            </div>
+            <div>
+              <p class="text-xl font-bold text-gray-800 mb-1">Confirmação Cruzada</p>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Acesse o site oficial da instituição e utilize os links de redes sociais disponíveis no rodapé para
+                garantir que você está seguindo o perfil correto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Coluna de Imagem -->
+        <div class="image-column">
+          <div class="image-container">
+            <img alt="Smartphone mostrando perfil de rede social verificado com selo de segurança"
+              src="https://page.gensparksite.com/slides_images/aa90bf5e334b388f30037ab6567c8876.webp" />
+          </div>
+          <!-- Elemento decorativo flutuante -->
+          <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-100 rounded-full opacity-50 z-0"></div>
+          <div class="absolute -top-6 -left-6 w-16 h-16 bg-blue-50 rounded-full opacity-50 z-0"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide13.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+    <a href="slide15.html" class="nav-btn"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
+
 </html>

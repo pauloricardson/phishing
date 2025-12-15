@@ -1,12 +1,143 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 17</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Capa - Cuidados com Operações Bancárias</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-panel {
+      flex: 1.1;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      background-color: #ffffff;
+    }
+
+    .right-panel {
+      flex: 0.9;
+      position: relative;
+      overflow: hidden;
+      background-color: #f0f4f8;
+    }
+
+    .right-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .title-accent {
+      width: 100px;
+      height: 8px;
+      background-color: #00aaff;
+      /* Azul Ciano para destaque */
+      margin-bottom: 30px;
+    }
+
+    .bottom-info {
+      margin-top: auto;
+      padding-top: 30px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* Decoração geométrica sutil */
+    .geo-shape {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background-color: #003366;
+      opacity: 0.05;
+      border-top-left-radius: 100%;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 17</h1>
-  <p>Conteúdo do slide 17</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral da Marca -->
+    <div class="brand-stripe"></div>
+    <div class="content-wrapper">
+      <!-- Painel de Texto -->
+      <div class="left-panel">
+        <!-- Cabeçalho Institucional -->
+        <div class="flex items-center mb-8 text-blue-900">
+          <i class="fas fa-money-check-dollar text-3xl mr-3"></i>
+          <p class="text-lg font-bold tracking-widest uppercase">Segurança Financeira</p>
+        </div>
+        <!-- Título Principal -->
+        <div class="title-accent"></div>
+        <h1 class="text-6xl font-black text-gray-900 leading-tight mb-6">
+          Cuidados com<br />
+          <span class="text-blue-800">Operações Bancárias</span>
+        </h1>
+        <!-- Subtítulo -->
+        <h2 class="text-2xl text-gray-600 font-normal mb-8 leading-relaxed max-w-2xl">
+          Transações financeiras exigem verificação extra. Veja como confirmar identidades, avaliar lojas e pagar com
+          segurança.
+        </h2>
+        <!-- Rodapé do Slide -->
+        <div class="bottom-info">
+          <div class="flex flex-col space-y-2">
+            <p class="flex items-center">
+              <i class="fas fa-magnifying-glass-dollar w-6 text-blue-500"></i>
+              <span>Identificação de fraudes em pagamentos</span>
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-shop w-6 text-blue-500"></i>
+              <span>Verificação de lojas e intermediários</span>
+            </p>
+          </div>
+        </div>
+        <!-- Elemento decorativo -->
+        <div class="geo-shape"></div>
+      </div>
+      <!-- Painel de Imagem -->
+      <div class="right-panel">
+        <img alt="Proteção de transações financeiras e pagamentos online seguros"
+          src="https://page.gensparksite.com/slides_images/ad5dfc2bef4f83b666c913871e49f7eb.webp" />
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide16.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+    <a href="slide18.html" class="nav-btn"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
+
 </html>
