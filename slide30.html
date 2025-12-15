@@ -1,12 +1,242 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 30</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Encerramento e Contatos</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 80px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 10;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 50px;
+      flex: 1;
+      height: 100%;
+    }
+
+    .resources-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      height: 100%;
+    }
+
+    .resource-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .resource-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-color: #cbd5e1;
+      background-color: #ffffff;
+    }
+
+    .resource-icon {
+      width: 56px;
+      height: 56px;
+      background-color: #e0f2fe;
+      color: #0284c7;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-right: 24px;
+      flex-shrink: 0;
+    }
+
+    .resource-info {
+      flex: 1;
+    }
+
+    .resource-info h3 {
+      margin: 0 0 4px 0;
+      color: #1e293b;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .resource-info p {
+      margin: 0;
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .highlight-text {
+      color: #00aaff;
+      font-weight: 500;
+    }
+
+    .info-panel {
+      background-color: #003366;
+      color: white;
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .info-icon {
+      font-size: 80px;
+      color: rgba(255, 255, 255, 0.2);
+      margin-bottom: 30px;
+    }
+
+    .geo-shape {
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .geo-shape-2 {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 30</h1>
-  <p>Conteúdo do slide 30</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Encerramento e Contatos</h2>
+        <p class="text-xl text-gray-500 font-light">Sua atenção é fundamental. A segurança da informação começa com
+          você.</p>
+      </div>
+      <!-- Grid de Conteúdo -->
+      <div class="content-grid">
+        <!-- Coluna da Esquerda: Próximos Passos -->
+        <div class="resources-list">
+          <!-- Card 1 -->
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-shield-heart"></i>
+            </div>
+            <div class="resource-info">
+              <h3>Proteja-se Diariamente</h3>
+              <p>A segurança não é um produto, é um hábito. Mantenha suas verificações ativas e desconfie de abordagens
+                incomuns todos os dias.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-users-rays"></i>
+            </div>
+            <div class="resource-info">
+              <h3>Compartilhe Conhecimento</h3>
+              <p>Ajude a criar um ambiente digital mais seguro. Compartilhe essas dicas de prevenção com colegas de
+                trabalho, amigos e familiares.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="resource-info">
+              <h3>Equipe de Segurança / TI</h3>
+              <p>Em caso de dúvida, incidente ou comportamento suspeito, não hesite em nos contatar imediatamente.</p>
+              <p class="mt-2 text-sm font-medium text-blue-600"><i class="fas fa-envelope mr-2"></i>
+                suporte.ti@empresa.com.br</p>
+            </div>
+          </div>
+        </div>
+        <!-- Coluna da Direita: Painel de Agradecimento -->
+        <div class="info-panel shadow-lg">
+          <div class="geo-shape"></div>
+          <div class="geo-shape-2"></div>
+          <i class="fas fa-check-double info-icon"></i>
+          <h3 class="text-3xl font-bold mb-4">Obrigado!</h3>
+          <p class="text-blue-100 text-lg mb-8 leading-relaxed">
+            "A melhor defesa contra o phishing é o conhecimento e o senso crítico."
+          </p>
+          <div class="mt-auto w-full pt-6 border-t border-blue-800">
+            <p class="text-blue-300 text-sm font-bold uppercase tracking-widest">Juntos somos mais seguros</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide29.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+  </div>
 </body>
+
 </html>

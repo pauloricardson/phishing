@@ -1,12 +1,242 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 28</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Checklist de Proteção Contra Phishing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 40px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 25px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Checklist specific styles */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+
+    .checklist-card {
+      background-color: #f8fafc;
+      border-left: 5px solid #cbd5e1;
+      border-radius: 0 8px 8px 0;
+      padding: 15px 20px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+    }
+
+    .checklist-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .checklist-card.priority {
+      border-left-color: #00aaff;
+      background-color: #f0f9ff;
+    }
+
+    .checklist-card.warning {
+      border-left-color: #ef4444;
+      background-color: #fef2f2;
+    }
+
+    .check-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+      font-size: 16px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .checklist-card.priority .check-circle {
+      color: #00aaff;
+      border: 2px solid #00aaff;
+    }
+
+    .checklist-card.warning .check-circle {
+      color: #ef4444;
+      border: 2px solid #ef4444;
+    }
+
+    .checklist-card:not(.priority):not(.warning) .check-circle {
+      color: #64748b;
+      border: 2px solid #cbd5e1;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Footer tip */
+    .tip-box {
+      margin-top: auto;
+      background-color: #ecfdf5;
+      border: 1px solid #6ee7b7;
+      border-radius: 12px;
+      padding: 12px 25px;
+      display: flex;
+      align-items: center;
+      color: #065f46;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 28</h1>
-  <p>Conteúdo do slide 28</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-2">Checklist de Proteção Contra Phishing</h2>
+        <p class="text-xl text-gray-500 font-light">Adote estas práticas simples para blindar sua vida digital contra
+          fraudes.</p>
+      </div>
+      <!-- Grid de Checklist -->
+      <div class="checklist-grid">
+        <!-- Item 1: Impulso (Warning) -->
+        <div class="checklist-card warning">
+          <div class="check-circle">
+            <i class="fas fa-hand-pointer"></i>
+          </div>
+          <div class="card-content">
+            <h3>Não Clique por Impulso</h3>
+            <p>Controle a curiosidade. Antes de clicar, verifique quem enviou e o contexto. Na dúvida, não interaja.</p>
+          </div>
+        </div>
+        <!-- Item 2: Identidade (Priority) -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="card-content">
+            <h3>Confirme a Identidade</h3>
+            <p>Recebeu um pedido urgente? Ligue para a pessoa ou empresa usando um canal oficial diferente daquele da
+              mensagem.</p>
+          </div>
+        </div>
+        <!-- Item 3: 2FA (Priority) -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Use Verificação em 2 Etapas</h3>
+            <p>Ative o 2FA em todas as contas possíveis. É a barreira mais eficaz contra roubo de credenciais.</p>
+          </div>
+        </div>
+        <!-- Item 4: QR e Links (Warning) -->
+        <div class="checklist-card warning">
+          <div class="check-circle">
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <div class="card-content">
+            <h3>Desconfie de QR e Links</h3>
+            <p>Cuidado com links encurtados e códigos QR em locais públicos. Eles podem redirecionar para sites falsos.
+            </p>
+          </div>
+        </div>
+        <!-- Item 5: Denuncie (Priority) -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-ban"></i>
+          </div>
+          <div class="card-content">
+            <h3>Denuncie e Bloqueie</h3>
+            <p>Ajude a limpar a rede. Denuncie mensagens maliciosas na própria plataforma e bloqueie os remetentes.</p>
+          </div>
+        </div>
+        <!-- Item 6: Informação (Regular/Priority) -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="card-content">
+            <h3>Mantenha-se Informado</h3>
+            <p>Golpistas criam novas táticas diariamente. Acompanhe alertas de segurança e compartilhe conhecimento.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Dica de Rodapé -->
+      <div class="tip-box shadow-sm mt-6">
+        <i class="fas fa-shield-virus text-green-600 text-2xl mr-4"></i>
+        <div>
+          <p class="font-bold mb-1">Segurança é Hábito:</p>
+          <p>Desconfiar não é ser pessimista, é ser prudente. <strong>Questione</strong> sempre que uma mensagem gerar
+            emoções fortes como medo ou euforia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide27.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+    <a href="slide29.html" class="nav-btn"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
+
 </html>

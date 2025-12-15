@@ -1,12 +1,257 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 25</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Recupere suas contas e troque senhas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 45px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 20px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Process Steps Styling */
+    .steps-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex: 1;
+      margin-top: 10px;
+    }
+
+    .step-card {
+      flex: 1;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 16px;
+      padding-top: 35px;
+      /* Espaço para o número */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-top: 4px solid #003366;
+      /* Accent color top */
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+      border-top-color: #00aaff;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 32px;
+      background-color: #003366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      border: 4px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .step-icon {
+      font-size: 28px;
+      color: #00aaff;
+      margin-bottom: 15px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-title {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 1.2;
+      min-height: 38px;
+      /* Altura fixa para alinhar títulos */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-desc {
+      color: #64748b;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    /* Connecting lines between steps (Visual decoration) */
+    .step-card:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      width: 12px;
+      height: 2px;
+      background-color: #cbd5e1;
+      z-index: 0;
+      display: none;
+      /* Hidden on this layout due to spacing, enabled if needed */
+    }
+
+    /* Bottom Alert Box */
+    .action-box {
+      margin-top: auto;
+      background-color: #fff1f2;
+      border-left: 6px solid #ef4444;
+      padding: 15px 25px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 25</h1>
-  <p>Conteúdo do slide 25</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Recupere suas contas e troque senhas</h2>
+        <p class="text-xl text-gray-500 font-light">Se você caiu em um golpe, agir rápido é fundamental para minimizar
+          os danos.</p>
+      </div>
+      <!-- Container de Etapas -->
+      <div class="steps-container">
+        <!-- Etapa 1 -->
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3 class="step-title">Troque Senhas</h3>
+          <p class="step-desc">
+            Altere imediatamente a senha da conta afetada e de quaisquer outras que utilizem a mesma combinação. Use
+            senhas fortes e únicas.
+          </p>
+        </div>
+        <!-- Etapa 2 -->
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <i class="fas fa-life-ring"></i>
+          </div>
+          <h3 class="step-title">Use a Recuperação</h3>
+          <p class="step-desc">
+            Se perdeu o acesso, utilize as opções "Esqueci minha senha" enviando códigos para seu e-mail ou telefone de
+            recuperação cadastrado.
+          </p>
+        </div>
+        <!-- Etapa 3 -->
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <i class="fas fa-right-from-bracket"></i>
+          </div>
+          <h3 class="step-title">Revogue Sessões</h3>
+          <p class="step-desc">
+            Nas configurações de segurança, use a opção "Sair de todos os dispositivos" para desconectar o invasor
+            imediatamente.
+          </p>
+        </div>
+        <!-- Etapa 4 -->
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="step-title">Ative 2FA</h3>
+          <p class="step-desc">
+            Ative ou regenere os códigos da Verificação em Duas Etapas. Isso impede que o golpista entre novamente,
+            mesmo com a senha.
+          </p>
+        </div>
+        <!-- Etapa 5 -->
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="step-title">Avise Contatos</h3>
+          <p class="step-desc">
+            Alerte amigos e familiares de que sua conta foi comprometida para que ignorem pedidos de dinheiro ou
+            mensagens estranhas.
+          </p>
+        </div>
+      </div>
+      <!-- Caixa de Ação -->
+      <div class="action-box shadow-sm">
+        <i class="fas fa-clock text-red-500 text-2xl mr-4"></i>
+        <div>
+          <p class="font-bold text-red-800 text-lg mb-1">A velocidade é sua aliada</p>
+          <p class="text-red-700 text-sm">
+            Quanto mais rápido você executar esses passos, menor a chance do criminoso utilizar seus dados para fraudes
+            financeiras ou roubo de identidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-footer">
+    <a href="slide24.html" class="nav-btn"><i class="fas fa-arrow-left"></i></a>
+    <a href="slide26.html" class="nav-btn"><i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
+
 </html>
